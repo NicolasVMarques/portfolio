@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfólio</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
                 <a href="#inicio" class="menu-link">Início</a>
             </li>
             <li>
-                <a href="#sobre" class="menu-link">Sobre</a>
+                <a href="#tecnologias" class="menu-link">Tecnologias</a>
             </li>
             <li>
                 <a href="#projetos" class="menu-link">Projetos</a>
@@ -28,22 +29,37 @@
         </ul>
     </nav>
 
-    <main id="inicio" class="cabecalho">
-        
-        <img src="Foto.jpg" alt="Foto de Nícolas" class="foto-perfil">
-        <h1>Nícolas Marques</h1>
-        <p class="cabecalho-subtitulo">Desenvolvedor Python</p>
+    <main id="inicio" class="perfil">
+        <div class="conteudo-perfil">
+            <h1>Desenvolvedor de Software</h1>
+            <p>Sou um estudante focado em Automação e Inteligência Artificial com Python. Mas possuo conhecimento em React Native, JavaScript, HTML, CSS e Banco de Dados SQL.</p>
+            <a href="curriculo" class="botao-curriculo">Currículo</a>
+        </div>
+        <div class="foto-perfil">
+            <img src="Foto.jpg" alt="Foto de Nícolas" class="perfil-img">
+        </div>
        
     </main>
 
-    <section id="sobre" class="sobre">
-        <h2 class="sobre-titulo">Sobre Mim</h2>
-        <div class="sobre-caixa">
-            <p class="sobre-paragrafo">
-                Sou um estudante apaixonado por Automação e Inteligência Artificial. Estou me aprofundando na 
-                linguagem Python, mas possuo conhecimento em React Native, JavaScript, HTML e CSS. Tenho familiaridade com SQL, banco de dados relacionais e sua integração 
-                com Python.
-            </p>
+    <section id="tecnologias" class="tecnologias">
+        <h2 class="tecnologias-titulo">Tecnologias Utilizadas</h2>
+        <div class="tecnologias-caixa">
+            <div class="tecnologias-card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Desenvolvimento Backend</h3>
+                <p>Python, Node.js, Java</p>
+            </div>
+            <div class="tecnologias-card">
+                <i class="fa-solid fa-paintbrush"></i>
+                <h3>Desenvolvimento Frontend</h3>
+                <p>React, JavaScript, HTML, CSS</p>
+            </div>
+            <div class="tecnologias-card">
+                <i class="fa-solid fa-database"></i>
+                <h3>Banco de Dados</h3>
+                <p>MySQL, SQLite</p>
+            </div>
+            
         </div>
     </section>
 
@@ -87,6 +103,17 @@
 
         </form>
     </section>
+
+    <footer>
+
+        <p>&copy; 2025 Nícolas Marques. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+
+    </footer>
 
 </body>
 </html>

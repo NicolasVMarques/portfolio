@@ -10,22 +10,23 @@ html {
 }
 
 :root {
-    --primaria: #4f46e5;
-    --secundaria: #7c3aed;
-    --escuro: #0f172a;
-    --maisescuro: #0a0f1c;
-    --claro: #e2e8f0;
+    --escuro: #0a0a0a;
+    --maisescuro: #050505;
+    --primaria: rgba(46, 204, 113, 0.4);
+    --secundaria: #2ecc71;
+    --claro: #ffffff;
     --vidro: rgba(255, 255, 255, 0.1);
 }
 
 body {
-    background-color: var(--escuro);
+    background: var(--maisescuro);
     color: var(--claro);
+    overflow-x: hidden;
 }
 
 .navegacao {
     position: fixed;
-    background: rgba(15, 23, 42, 0.8);
+    background: rgba(10, 10, 10, 0.2);
     width: 100%;
     z-index: 100;
     padding: 1.5rem;
@@ -62,58 +63,111 @@ body {
     width: 100%;
 }
 
-.cabecalho {
+.perfil {
     min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    padding: 12% 5%;
+    background: radial-gradient(circle at 75% 30%, var(--maisescuro) 0%, transparent 30%);
+}
+
+.conteudo-perfil {
+    flex: 1;
+    padding-right: 5rem;
 }
 
 .foto-perfil {
-    width: 350px;
-    height: 350px;
-    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
-    border-radius: 50%;
-    border: 4px solid var(--vidro);
-    animation: flutuar 5s ease-in-out infinite;
+    flex: 1;
+    text-align: center;
+    position: relative;
 }
 
-h1 {
+.perfil-img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secundaria);
+    box-shadow: 0 0 50px var(--primaria);
+    animation: flutuar 5s ease-in-out infinite;
+    filter: grayscale(0.2) contrast(1.1);
+}
+
+.perfil h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, var(--secundaria) 30%, #ffffff 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.perfil p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.botao-curriculo {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background:#27ae60;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.h1 {
     font-size: 3.5rem;
+    margin-bottom: 4rem;
+    background: linear-gradient(45deg, var(--secundaria) 30%, #ffffff 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: var(--claro);
     font-weight: bold;
     margin: 20px;
 }
 
-.cabecalho-subtitulo {
-    font-size: 1.5rem;
-    color: var(--primaria);
+.tecnologias {
+    padding: 5rem 5%;
 }
 
-.sobre {
-    padding: 6rem 2rem;
+.tecnologias-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
-.sobre-titulo {
-    font-size: 3rem;
-    color: var(--claro);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.sobre-caixa {
+.tecnologias-card {
     padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    border-radius: 16px;
-    border: 1px solid var(--vidro);
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
 }
 
-.sobre-paragrafo {
-    font-size: 1rem;
+.tecnologias-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--secundaria);
+    box-shadow: 0 10px 30px var(--primaria);
+    cursor: pointer;
+}
+
+.tecnologias-card i {
+    font-size: 2.5rem;
+    color: var(--secundaria);
+    margin-bottom: 1rem;
+}
+
+.tecnologias-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
 }
 
 .projetos {
@@ -145,7 +199,7 @@ h1 {
 }
 
 .projetos-card:hover {
-    box-shadow: 0 1px 20px rgba(79, 70, 229, 0.2);
+    box-shadow: 0 1px 20px var(--primaria);
     transform: translateY(-10px) scale(1.03);
 }
 
@@ -222,21 +276,7 @@ h1 {
 
 .botao-form:hover {
     transform: translateY(-4px);
-    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
-}
-
-.particulas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.5;
-    background:
-    radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
-    radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
-    var(--maisescuro);
+    box-shadow: 0 5px 15px var(--primaria);
 }
 
 @keyframes flutuar {
@@ -246,5 +286,48 @@ h1 {
 
     50% {
         transform: translateY(-20px);
+    }
+}
+
+footer {
+    
+    padding: 3rem 5%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-links a {
+    color: var(--claro);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secundaria);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .perfil {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 8rem;
+    }
+
+    .conteudo-perfil {
+        padding-right: 0;
+        margin-bottom: 3rem;
+    }
+
+    .perfil-img {
+        width: 280px;
+        height: 280px;
     }
 }
