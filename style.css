@@ -108,16 +108,43 @@ body {
     max-width: 600px;
 }
 
+.botoes-perfil {
+    display: flex;
+    align-items: center;
+}
+
+.social-links {
+    margin-left: 20px;
+}
+
+.social-links a {
+    font-size: 50px;
+    color: var(--claro);
+    margin: 0 8px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secundaria);
+    transform: translateY(-3px);
+}
+
 .botao-curriculo {
     display: inline-block;
     padding: 1rem 2rem;
     background:#27ae60;
-    color: white;
+    color: black;
     border-radius: 8px;
+    border: 2px solid #27ae60;
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+}
+
+.botao-curriculo:hover {
+    background: transparent;
+    color: white
 }
 
 .h1 {
@@ -143,6 +170,10 @@ body {
 }
 
 .tecnologias-card {
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    flex-direction: column;  /* mantém o ícone em cima e texto embaixo */
     padding: 2rem;
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.05);
@@ -290,28 +321,9 @@ body {
 }
 
 footer {
-    
     padding: 3rem 5%;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.social-links {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.social-links a {
-    color: var(--claro);
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--secundaria);
-    transform: translateY(-3px);
 }
 
 @media (max-width: 768px) {
