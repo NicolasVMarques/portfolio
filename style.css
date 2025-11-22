@@ -37,7 +37,6 @@ body {
     justify-content: center;
     list-style: none;
     gap: 3rem;
-
 }
 
 .menu-link {
@@ -63,12 +62,16 @@ body {
     width: 100%;
 }
 
+.menu-link.active {
+    color: var(--secundaria);
+    font-weight: bold;
+}
+
 .perfil {
     min-height: 100vh;
     display: flex;
     align-items: center;
     padding: 12% 5%;
-    background: radial-gradient(circle at 75% 30%, var(--maisescuro) 0%, transparent 30%);
 }
 
 .conteudo-perfil {
@@ -159,6 +162,7 @@ body {
 }
 
 .tecnologias {
+    min-height: 90vh;
     padding: 5rem 5%;
 }
 
@@ -171,9 +175,9 @@ body {
 
 .tecnologias-card {
     display: flex;
-    justify-content: center; /* horizontal */
-    align-items: center;     /* vertical */
-    flex-direction: column;  /* mantém o ícone em cima e texto embaixo */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 2rem;
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.05);
@@ -202,6 +206,7 @@ body {
 }
 
 .projetos {
+    min-height: 90vh;
     padding: 6rem 2rem;
 }
 
@@ -254,6 +259,7 @@ body {
 }
 
 .contatos {
+    min-height: 90vh;
     padding: 6rem 2rem;
 }
 

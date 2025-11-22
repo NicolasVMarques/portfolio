@@ -4,32 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfólio</title>
 </head>
 <body>
+    <header>
+        <nav class="navegacao">
+            <ul class="menu">
+                <li>
+                    <a href="#inicio" class="menu-link">Início</a>
+                </li>
+                <li>
+                    <a href="#tecnologias" class="menu-link">Tecnologias</a>
+                </li>
+                <li>
+                    <a href="#projetos" class="menu-link">Projetos</a>
+                </li>
+                <li>
+                    <a href="#contato" class="menu-link">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     
-    <div class="particulas"></div>
-
-    <nav class="navegacao">
-        <ul class="menu">
-            <li>
-                <a href="#inicio" class="menu-link">Início</a>
-            </li>
-            <li>
-                <a href="#tecnologias" class="menu-link">Tecnologias</a>
-            </li>
-            <li>
-                <a href="#projetos" class="menu-link">Projetos</a>
-            </li>
-            <li>
-                <a href="#contato" class="menu-link">Contato</a>
-            </li>
-        </ul>
-    </nav>
-
-    <main id="inicio" class="perfil">
+    <section id="inicio" class="perfil">
         <div class="conteudo-perfil">
             <h1>Desenvolvedor de Software</h1>
             <p>Sou um estudante focado em Automação e Inteligência Artificial com Python. Mas possuo conhecimento em React Native, JavaScript, HTML, CSS e SQL.</p>
@@ -46,7 +44,7 @@
             <img src="Foto.jpg" alt="Foto de Nícolas" class="perfil-img">
         </div>
        
-    </main>
+    </section> 
 
     <section id="tecnologias" class="tecnologias">
         <h2 class="tecnologias-titulo">Tecnologias Utilizadas</h2>
@@ -115,8 +113,7 @@
 
         <p>&copy; 2025 Nícolas Marques. Todos os direitos reservados.</p>
         
-
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

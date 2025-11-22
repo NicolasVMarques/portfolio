@@ -16,3 +16,29 @@ function enviarWhats(event) {
     window.open(url, '_blank')
     
 }
+
+/* Link ativo de seções de rolagem (Scroll)*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    let sections = document.querySelectorAll('section, main');
+    let navLinks = document.querySelectorAll('header nav a');
+
+    window.addEventListener('scroll', () => {
+        let scrollPos = window.scrollY + 200;
+
+        sections.forEach(section => {
+            let offset = section.offsetTop - 150;
+            let height = section.offsetHeight;
+            let id = section.getAttribute("id");
+
+            if (scrollPos >= offset && scrollPos < offset + height) {
+
+                navLinks.forEach(link => link.classList.remove('active'));
+
+                let activeLink = document.querySelector(`header nav a[href="#${id}"]`);
+                if (activeLink) activeLink.classList.add('active');
+            };
+        });
+    });
+});
