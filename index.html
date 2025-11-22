@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Portfólio</title>
 </head>
 <body>
     
+    <div class="particulas"></div>
+
     <nav class="navegacao">
         <ul class="menu">
             <li>
@@ -37,7 +40,9 @@
         <h2 class="sobre-titulo">Sobre Mim</h2>
         <div class="sobre-caixa">
             <p class="sobre-paragrafo">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla similique mollitia iure distinctio, facilis repellat, totam illo praesentium error iste unde deserunt quia saepe cum consectetur dolor tempora. Nesciunt, voluptatem.
+                Sou um estudante apaixonado por Automação e Inteligência Artificial. Estou me aprofundando na 
+                linguagem Python, mas possuo conhecimento em React Native, JavaScript, HTML e CSS. Tenho familiaridade com SQL, banco de dados relacionais e sua integração 
+                com Python.
             </p>
         </div>
     </section>
@@ -47,37 +52,38 @@
         <div class="projetos-caixa">
 
             <div class="projetos-card">
-                <img src="" alt="Projeto 1" class="projetos-imagem">
-                <h3 class="info-projetos">Aplicativo Android</h3>
-                <p class="paragrafo-projetos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo impedit est excepturi neque unde officiis, fugiat in, blanditiis, magni quis quae. Sed obcaecati nisi eius consequuntur beatae modi laudantium voluptate?</p>
+                <img src="DnaiPhone.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Aplicativo Android</h3>
+                    <p class="paragrafo-projetos">Este é um aplicativo desenvolvido em React Native, com Expo, para auxiliar no gerenciamento de estoque da loja DnaiPhone.</p>
+                </div>
             </div>
 
             <div class="projetos-card">
-                <img src="" alt="Projeto 2" class="projetos-imagem">
-                <h3 class="info-projetos">Automação RPA</h3>
-                <p class="paragrafo-projetos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo impedit est excepturi neque unde officiis, fugiat in, blanditiis, magni quis quae. Sed obcaecati nisi eius consequuntur beatae modi laudantium voluptate?</p>
-            </div>
-
-            <div class="projetos-card">
-                <img src="" alt="Projeto 3" class="projetos-imagem">
-                <h3 class="info-projetos">Automação planilha</h3>
-                <p class="paragrafo-projetos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo impedit est excepturi neque unde officiis, fugiat in, blanditiis, magni quis quae. Sed obcaecati nisi eius consequuntur beatae modi laudantium voluptate?</p>
+                <img src="automacao_salesforce.png" alt="Projeto 2" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Automação Salesforce</h3>
+                    <p class="paragrafo-projetos">Automação para cadastrar leads no Salesforce. Ele cria uma interface gráfica com Tkinter, lê cada linha da planilha usando Pandas e, usando PyAutoGUI, preenche automaticamente todos os campos na plataforma.</p>
+                </div>
             </div>
 
         </div>
     </section>
 
-    <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Contatos</h2>
-        <form class="formulario-contato" id="formulario">
+    <section id="contato" class="contatos">
+        <h2 class="contatos-titulo">Entre em contato</h2>
 
-            <div class="nome-form">
-                <input placeholder="Nome" class="campo-form">
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
             </div>
 
             <div class="grupo-form">
-                <textarea class="text-form" placeholder="Digite sua mensagem"></textarea>
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="6" id="mensagem"></textarea>
             </div>
+
+            <button type="submit" class="botao-form">Enviar Whatsapp</button>
 
         </form>
     </section>
